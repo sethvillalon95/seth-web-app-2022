@@ -1,0 +1,23 @@
+{
+  "name": "seth-web-app-2022",
+  "version": "1.0.0",
+  "description": "Web app made by Seth as one of his personal projects.",
+  "main": "index.js",
+  "scripts": {
+      "startDev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethvillalon95/seth-web-app-2022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethvillalon95/seth-web-app-2022/issues"
+  },
+  "homepage": "https://github.com/sethvillalon95/seth-web-app-2022#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7"
+  }
+}
