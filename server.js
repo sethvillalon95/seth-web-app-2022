@@ -1,8 +1,8 @@
-require('dotenv').config();
+require('dotenv').config()
 
-const express = require('express');
-const app = express();
-const mongoose = require('mongoose');
+const express = require('express')
+const app = express()
+const mongoose = require('mongoose')
 
 //connect to the db
 mongoose.connect(process.env.DATABASE_URL, {
@@ -13,8 +13,11 @@ mongoose.connect(process.env.DATABASE_URL, {
     console.log('error comming from the catch statement')
 }).then(()=>{
     console.log('DB connected successfully!')
+    app.use(express.json());
+    const itemsRouter = require('./routes/items')
+    app.use('/items',itemsRouter)
     const portNum = process.env.PORTNUM;
-    app.listen(portNum, ()=> console.log('Listening to port: '+ portNum));
+    app.listen(portNum, ()=> console.log('Listening to port: '+ portNum))
 
 }
 
