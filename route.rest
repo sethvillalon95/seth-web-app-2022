@@ -1,1 +1,14 @@
+#get all
 GET http://localhost:54321/items
+
+POST http://localhost:54321/items
+
+
+#post one
+POST http://localhost:54321/items
+Content-Type: application/json
+
+{
+    "item_name":"Test Item",
+    "item_type":"Unknown"
+}
