@@ -33,6 +33,15 @@ router.post('/', async(req,res)=>{
 //update one
 
 //delete one
+router.delete('/:id', getItem, async(req,res)=>{
+    try {
+        await res.item.remove()
+        res.json({message:'Deleted Successfully'})
+    } catch (error) {
+        return res.status(500).json({message:error.message})
+    }
+})
+
 
 // 
 async function getItem(req,res,next){
